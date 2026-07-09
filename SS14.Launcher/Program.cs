@@ -119,6 +119,10 @@ internal static class Program
         {
             BuildAvaloniaApp(cfg).StartWithClassicDesktopLifetime(args);
         }
+        catch (Exception ex)
+        {
+            Log.Error(ex, "Launcher crashed with unhandled exception(s).");
+        }
         finally
         {
             Log.CloseAndFlush();
