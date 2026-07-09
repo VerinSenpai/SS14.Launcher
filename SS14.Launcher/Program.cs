@@ -122,6 +122,7 @@ internal static class Program
         catch (Exception ex)
         {
             Log.Error(ex, "Launcher crashed with unhandled exception(s).");
+            throw;
         }
         finally
         {
